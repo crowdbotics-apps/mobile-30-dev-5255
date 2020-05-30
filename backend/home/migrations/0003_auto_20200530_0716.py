@@ -8,18 +8,24 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0002_load_initial_data'),
+        ("home", "0002_load_initial_data"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customtext',
-            name='gfgfd',
-            field=models.ManyToManyField(blank=True, related_name='customtext_gfgfd', to='home.HomePage'),
+            model_name="customtext",
+            name="gfgfd",
+            field=models.ManyToManyField(
+                blank=True, related_name="customtext_gfgfd", to="home.HomePage"
+            ),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='tfryrhgf',
-            field=models.ManyToManyField(blank=True, related_name='customtext_tfryrhgf', to=settings.AUTH_USER_MODEL),
+            model_name="customtext",
+            name="tfryrhgf",
+            field=models.ManyToManyField(
+                blank=True,
+                related_name="customtext_tfryrhgf",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]
