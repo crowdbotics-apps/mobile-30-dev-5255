@@ -9,49 +9,91 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0004_auto_20200530_0738'),
+        ("home", "0004_auto_20200530_0738"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Test',
+            name="Test",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('test', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("test", models.BigIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Testing',
+            name="Testing",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('test', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("test", models.BigIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Testtt',
+            name="Testtt",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('testt', models.BinaryField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("testt", models.BinaryField()),
             ],
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='emp',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='customtext_emp', to=settings.AUTH_USER_MODEL),
+            model_name="customtext",
+            name="emp",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="customtext_emp",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='name',
+            model_name="customtext",
+            name="name",
             field=models.BinaryField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='subpage',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='customtext_subpage', to='home.CustomText'),
+            model_name="customtext",
+            name="subpage",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="customtext_subpage",
+                to="home.CustomText",
+            ),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='test',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='customtext_test', to=settings.AUTH_USER_MODEL),
+            model_name="customtext",
+            name="test",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="customtext_test",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]
