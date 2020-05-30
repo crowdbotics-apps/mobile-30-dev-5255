@@ -8,6 +8,28 @@ from django.db import models
 
 class CustomText(models.Model):
     title = models.CharField(max_length=150,)
+    name = models.BinaryField(null=True, blank=True,)
+    test = models.ForeignKey(
+        "users.User",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="customtext_test",
+    )
+    emp = models.ForeignKey(
+        "users.User",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="customtext_emp",
+    )
+    subpage = models.ForeignKey(
+        "home.CustomText",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="customtext_subpage",
+    )
 
     def __str__(self):
         return self.title
@@ -31,3 +53,18 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class Testtt(models.Model):
+    "Generated Model"
+    testt = models.BinaryField()
+
+
+class Testing(models.Model):
+    "Generated Model"
+    test = models.BigIntegerField()
+
+
+class Test(models.Model):
+    "Generated Model"
+    test = models.BigIntegerField()
