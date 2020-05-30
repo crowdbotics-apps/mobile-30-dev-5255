@@ -34,9 +34,9 @@ urlpatterns = [
     path("api/v1/", include("users.api.v1.urls")),
 ]
 
-admin.site.site_header = "mobile 301"
-admin.site.site_title = "mobile 301 Admin Portal"
-admin.site.index_title = "mobile 301 Admin"
+admin.site.site_header = "mobile 30"
+admin.site.site_title = "mobile 30 Admin Portal"
+admin.site.index_title = "mobile 30 Admin"
 
 # swagger
 schema_view = get_schema_view(
